@@ -2,10 +2,11 @@ import { Link } from "react-router";
 
 export const Navigation = () => {
 	return (
-		<div>
+		<nav>
 			<Link to="/">Home</Link>
 			<Link to="/making-of">Making Of</Link>
 			<Link to="/all-projects">All Projects</Link>
-		</div>
+			<Link to="/fairy-tale">Sprookje</Link>
+		</nav>
 	);
 };
