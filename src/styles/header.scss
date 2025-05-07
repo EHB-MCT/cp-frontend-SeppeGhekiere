@@ -1,27 +1,30 @@
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2.5vw 5vw;
+	padding: 2.5vw 0vw;
 	height: 10vh;
 	max-height: 10vh;
-	margin-bottom: 150px;
+	margin-bottom: 5vh;
 }
 
-header img {
+.header img {
 	height: 100%;
 	width: auto;
 }
-nav {
+.nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 40vw;
 }
-a {
+.nav a {
 	text-decoration: none;
 	color: #000;
-	font-size: 1.5vw;
+	font-size: 1vw;
 	font-weight: 500;
 	transition: all 0.3s ease-in-out;
+}
+.clicked {
+	color: red !important;
 }

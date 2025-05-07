@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router";
-import { Projects } from "../app/components/Projects/Project";
-import { Navigation } from "../shared/components/navigation";
-import { NotFound } from "../app/components/404/NotFound";
-import { FairyTale } from "../app/components/Fairytale/Fairytale";
-import { Home } from "../app/components/Home/home";
-import { MakingOf } from "../app/components/Making_of/makingOf";
-import { Header } from "../shared/components/header";
+import { Projects } from "../app/pages/Projects";
+import { Navigation } from "../app/components/Navigation";
+import { NotFound } from "../app/pages/NotFound";
+import { FairyTale } from "../app/pages/FairyTale";
+import { Home } from "../app/pages/Home";
+import { MakingOf } from "../app/pages/MakingOf";
+import { Header } from "../app/components/header";
 
 export const router = createBrowserRouter([
 	{
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "all-projects",
+		path: "/all-projects",
 		element: <Projects />,
 		children: [
 			{
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "fairy-tale",
+		path: "/fairytale",
 		element: <FairyTale />,
 		children: [
 			{
