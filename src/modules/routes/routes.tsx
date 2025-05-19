@@ -10,7 +10,7 @@ import { Footer } from "../app/components";
 
 export const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "",
 		element: <Home />,
 		children: [
 			{
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "/making-of",
+		path: "making-of",
 		element: <MakingOf />,
 		children: [
 			{
@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "/all-projects",
+		path: "all-projects",
 		element: <Projects />,
 		children: [
 			{
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "/fairytale",
+		path: "fairytale",
 		element: <FairyTale />,
 		children: [
 			{
