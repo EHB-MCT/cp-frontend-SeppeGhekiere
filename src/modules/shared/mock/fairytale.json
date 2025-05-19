@@ -28,5 +28,12 @@
 		"fairyTaleUrl": "url",
 		"genre": "magic"
 	},
-	{ "author": "Seppe Ghekiere", "name": "De koning en de witte slang", "coverImg": "/Frame1.jpg", "fairyTaleUrl": "url", "genre": "magic" }
+	{ "author": "Seppe Ghekiere", "name": "De koning en de witte slang", "coverImg": "/Frame1.jpg", "fairyTaleUrl": "url", "genre": "magic" },
+	{
+		"author": "Lucie",
+		"name": "Bob, Froggie and Jeff go on ...",
+		"coverImg": "/Frame1.jpg",
+		"fairyTaleUrl": "url",
+		"genre": "adventure"
+	}
 ]
