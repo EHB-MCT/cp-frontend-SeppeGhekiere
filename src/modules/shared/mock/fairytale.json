@@ -2,14 +2,31 @@
 	{
 		"author": "Seppe Ghekiere",
 		"name": "De koning en de witte slang",
-		"coverImg": "url",
-		"fairyTaleUrl": "url"
+		"coverImg": "/Frame1.jpg",
+		"fairyTaleUrl": "url",
+		"genre": "adventure"
 	},
 	{
 		"author": "Lucie",
 		"name": "Bibble and the wizard",
-		"coverImg": "url",
-		"fairyTaleUrl": "url"
+		"coverImg": "/Frame9.jpg",
+		"fairyTaleUrl": "url",
+		"genre": "magic"
 	},
-	{ "author": "Seppe Ghekiere", "name": "De koning en de witte slang", "coverImg": "url", "fairyTaleUrl": "url" }
+	{ "author": "Seppe Ghekiere", "name": "De koning en de witte slang", "coverImg": "/public/Frame1.jpg", "fairyTaleUrl": "url", "genre": "magic" },
+	{
+		"author": "Seppe Ghekiere",
+		"name": "De koning en de witte slang",
+		"coverImg": "/Frame1.jpg",
+		"fairyTaleUrl": "url",
+		"genre": "magic"
+	},
+	{
+		"author": "Lucie",
+		"name": "Bibble and the wizard",
+		"coverImg": "/Frame9.jpg",
+		"fairyTaleUrl": "url",
+		"genre": "magic"
+	},
+	{ "author": "Seppe Ghekiere", "name": "De koning en de witte slang", "coverImg": "/Frame1.jpg", "fairyTaleUrl": "url", "genre": "magic" }
 ]

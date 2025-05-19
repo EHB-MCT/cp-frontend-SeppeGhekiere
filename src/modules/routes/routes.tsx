@@ -5,7 +5,8 @@ import { NotFound } from "../app/pages/NotFound";
 import { FairyTale } from "../app/pages/FairyTale";
 import { Home } from "../app/pages/Home";
 import { MakingOf } from "../app/pages/MakingOf";
-import { Header } from "../app/components/header";
+import { Header } from "../app/components";
+import { Footer } from "../app/components";
 
 export const router = createBrowserRouter([
 	{
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
 			{
 				path: "",
 				element: <Header />,
+			},
+			{
+				path: "",
+				element: <Footer />,
 			},
 		],
 	},

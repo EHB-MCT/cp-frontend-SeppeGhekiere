@@ -1,10 +1,13 @@
 import { Outlet } from "react-router";
+import { AllProjects, SearchButton, SearchFilter } from "../components";
 
 export const Projects = () => {
 	return (
-		<div>
+		<div className="allProjects">
 			<Outlet />
-			<h2>This is the page with all the projects</h2>
+			<SearchButton />
+			<SearchFilter />
+			<AllProjects />
 		</div>
 	);
 };

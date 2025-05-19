@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { dataService } from "../service/data.service";
 
 export const GetData = () => {
@@ -23,29 +23,7 @@ export const GetData = () => {
 	}, []); // Empty dependency array means this runs once when the component mounts
 
 	if (loading) {
-		return <div>Loading...</div>;
+		return "loading...";
 	}
-
-	if (error) {
-		return <div>{error}</div>;
-	}
-
-	if (!data || data.length === 0) {
-		return <h2>No data available</h2>;
-	}
-
-	return (
-		<div className="fairytale">
-			<h1>Populair</h1>
-			<div className="fairytale-container">
-				{data.map((item, index) => (
-					<div key={index} className="single-fairytale">
-						<img src="" className="coverImg" alt="" />
-						<h1 className="name">{item.name}</h1>
-						<p className="author">Door {item.author}</p>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+	return data;
 };

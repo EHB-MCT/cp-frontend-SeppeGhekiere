@@ -7,8 +7,9 @@ export const Navigation = () => {
 			<Link to="/" className="clicked">
 				Home
 			</Link>
-			<Link to="/making-of">Making Of</Link>
 			<Link to="/all-projects">All Projects</Link>
+			<Link to="/making-of">Making Of</Link>
+
 			<Link to="/fairy-tale">Sprookje</Link>
 		</div>
 	);

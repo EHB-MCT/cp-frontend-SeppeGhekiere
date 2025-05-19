@@ -25,3 +25,4 @@ dist-ssr
 
 # custom
 .node_modules
+/.github

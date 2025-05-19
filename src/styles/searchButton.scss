@@ -21,3 +21,17 @@ button {
 	color: white;
 	margin-left: -6px;
 }
+.searchFilter {
+	display: flex;
+}
+.searchFilter input {
+	height: 1.5rem;
+}
+.filterItem {
+	display: flex;
+	align-items: center;
+	width: 10%;
+	font-size: 1.25rem;
+	color: white;
+	align-self: center;
+}
