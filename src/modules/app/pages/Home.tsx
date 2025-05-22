@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import { GetData } from "../../shared/utils/GetData";
 import { SearchButton } from "../components/SearchButton";
 import { HomeProjects } from "../components";
 
@@ -14,7 +13,9 @@ export const Home = () => {
 			</div>
 
 			<HomeProjects />
-			<a href="all-projects" className="home-btn-all-projects">Go to all projects</a>
+			<a href="all-projects" className="home-btn-all-projects">
+				Go to all projects
+			</a>
 		</div>
 	);
 };

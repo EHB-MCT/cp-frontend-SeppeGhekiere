@@ -1,7 +1,7 @@
-import { GetData } from "../../shared";
+import { useGetData } from "../../shared/hooks/UseGetData"; 
 import "../../../styles/app.scss";
 export const HomeProjects = () => {
-	const projects = GetData();
+	const projects = useGetData();
 	console.log(projects);
 	if (projects == "loading...") {
 		return <div>Loading...</div>;

@@ -1,17 +1,22 @@
 import { ApiData } from "../types/types";
-import apiMock from "../mock/fairytale.json";
+
 class DataService {
-	// Specify the return type of the method
-	// getData(): Promise<ApiData> {
-	// 	return new Promise((resolve) => {
-	// 		setTimeout(() => {
-	// 			resolve(apiMock); // Ensure trashMock matches TrashData structure
-	// 		}, 1000);
-	// 	});
-	// }
-	getData() {
-		console.log(apiMock);
-		return apiMock;
+	getData(): Promise<ApiData[]> {
+		return new Promise((resolve, reject) => {
+			fetch("https://raw.githubusercontent.com/EHB-MCT/cp-frontend-MaximWesterbeek/refs/heads/main/course-project/public/api/fairytaleList.json")
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error("Network response was not ok");
+					}
+					return response.json();
+				})
+				.then((data) => {
+					resolve(data); // Ensure data matches FairytaleData structure
+				})
+				.catch((error) => {
+					reject(error);
+				});
+		});
 	}
 }
 

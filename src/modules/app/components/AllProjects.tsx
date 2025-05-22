@@ -1,22 +1,35 @@
-import { GetData } from "../../shared";
+import { useGetData } from "../../shared/hooks/UseGetData"; // Adjust the import path as necessary
 import "../../../styles/app.scss";
+
 export const AllProjects = () => {
-	const projects = GetData();
-	console.log(projects);
-	if (projects == "loading...") {
+	const { data: projects, loading, error } = useGetData(); // Use the custom hook
+
+	if (loading) {
 		return <div>Loading...</div>;
 	}
-	// projects.sort()
-	let allProjects = projects;
+
+	if (error) {
+		return <div>Error: {error}</div>;
+	}
+
+	// Ensure projects is an array before mapping
+	if (!Array.isArray(projects)) {
+		return <div>No projects available.</div>;
+	}
+
 	return (
 		<div className="fairytale">
-			<h1>All projects</h1>
+			<h1>All Projects</h1>
 			<div className="fairytale-container">
-				{allProjects.map((item, index) => (
-					<div key={index} className="single-fairytale">
-						<img src={item.coverImg} className="coverImg" alt="" />
-						<h1 className="name">{item.name}</h1>
-						<p className="author">Door {item.author}</p>
+				{projects.map((item) => (
+					<div key={item.id} className="single-fairytale">
+						<img
+							src={item.imgThumbnail || "path/to/placeholder-image.png"} // Fallback image
+							className="coverImg"
+							alt={item.fairytale}
+						/>
+						<h1 className="name">{item.fairytale}</h1>
+						<p className="author">Door {item.nameStudent}</p> {/* Assuming nameStudent is the author */}
 					</div>
 				))}
 			</div>
