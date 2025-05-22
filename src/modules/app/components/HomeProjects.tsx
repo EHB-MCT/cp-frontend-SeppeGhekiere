@@ -1,27 +1,45 @@
-import { useGetData } from "../../shared/hooks/UseGetData"; 
+import { useGetData } from "../../shared/hooks/UseGetData";
 import "../../../styles/app.scss";
 export const HomeProjects = () => {
-	const projects = useGetData();
-	console.log(projects);
-	if (projects == "loading...") {
+	const { data: projects, loading, error } = useGetData(); // Use the custom hook
+
+	if (loading) {
 		return <div>Loading...</div>;
 	}
 
-	let randomProjects;
+	if (error) {
+		return <div>Error: {error}</div>;
+	}
 
-	randomProjects = projects.slice(0, 3);
+	// Ensure projects is an array before mapping
+	if (!Array.isArray(projects)) {
+		return <div>No projects available.</div>;
+	}
+	// Function to shuffle the array
+	const shuffleArray = (array) => {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]]; // Swap elements
+		}
+		return array;
+	};
+	// Shuffle projects and select the first 3
+	const randomProjects = shuffleArray([...projects]).slice(0, 3);
 
-	console.log(randomProjects);
 	return (
 		<div className="fairytale">
-			<h1>Populair</h1>
+			<h1>All Projects</h1>
 			<div className="fairytale-container">
-				{randomProjects.map((item, index) => (
-					<div key={index} className="single-fairytale">
-						<img src={item.coverImg} className="coverImg" alt="" />
-						<h1 className="name">{item.name}</h1>
-						<p className="author">Door {item.author}</p>
-					</div>
+				{randomProjects.map((item) => (
+					<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
+						<img
+							src={item.imgThumbnail || "path/to/placeholder-image.png"} // Fallback image
+							className="coverImg"
+							alt={item.fairytale}
+						/>
+						<h1 className="name">{item.fairytale}</h1>
+						<p className="author">Door {item.nameStudent}</p> {/* Assuming nameStudent is the author */}
+					</a>
 				))}
 			</div>
 		</div>

@@ -22,7 +22,7 @@ export const AllProjects = () => {
 			<h1>All Projects</h1>
 			<div className="fairytale-container">
 				{projects.map((item) => (
-					<div key={item.id} className="single-fairytale">
+					<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
 						<img
 							src={item.imgThumbnail || "path/to/placeholder-image.png"} // Fallback image
 							className="coverImg"
@@ -30,7 +30,7 @@ export const AllProjects = () => {
 						/>
 						<h1 className="name">{item.fairytale}</h1>
 						<p className="author">Door {item.nameStudent}</p> {/* Assuming nameStudent is the author */}
-					</div>
+					</a>
 				))}
 			</div>
 		</div>

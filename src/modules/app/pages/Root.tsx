@@ -14,6 +14,7 @@ const queryClient = new QueryClient({
 
 export const Root = () => (
 	<QueryClientProvider client={queryClient}>
+		<div className="main_background"></div>
 		<RouterProvider router={router} />
 	</QueryClientProvider>
 );
