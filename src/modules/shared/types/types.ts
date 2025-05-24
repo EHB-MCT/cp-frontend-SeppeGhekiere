@@ -2,7 +2,7 @@ export interface ApiData {
 	id: string;
 	nameStudent: string;
 	fairytale: string;
-	fairytalelink: string;
+	fairytaleLink: string;
 	description: string;
 	videoExplainer: string;
 	imgThumbnail: string;

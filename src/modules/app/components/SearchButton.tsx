@@ -4,7 +4,9 @@ export const SearchButton = () => {
 	return (
 		<div className="searchButton">
 			<input type="text" placeholder="🔍 Zoek hier een sprookje"></input>
-			<button>Zoeken</button>
+			<button>
+				<p>Zoeken</p>
+			</button>
 		</div>
 	);
 };

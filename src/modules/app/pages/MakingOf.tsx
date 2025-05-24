@@ -1,12 +1,12 @@
+import { MakingOfDetails } from "../components/MakingOfDetails";
 import { Outlet } from "react-router";
+import "../../../styles/app.scss";
 
 export const MakingOf = () => {
 	return (
-		<div>
+		<div className="makingOf">
 			<Outlet />
-			<div className="making-info">
-				<img src="" alt="" />
-			</div>
+			<MakingOfDetails />
 		</div>
 	);
 };

@@ -2,7 +2,7 @@ import "../../../styles/searchButton.scss";
 
 export const SearchFilter = ({ selectedFilter, setSelectedFilter }) => {
 	const handleFilterChange = (event) => {
-		setSelectedFilter(event.target.id); // Set the selected filter based on the radio button id
+		setSelectedFilter(event.target.id); 
 	};
 
 	return (
@@ -12,12 +12,12 @@ export const SearchFilter = ({ selectedFilter, setSelectedFilter }) => {
 					type="radio"
 					name="filter"
 					id="avontuur"
-					checked={selectedFilter === "avontuur"} // Check if this filter is selected
-					onChange={handleFilterChange} // Handle change
+					checked={selectedFilter === "avontuur"}
+					onChange={handleFilterChange} 
 				/>
 				<label
 					htmlFor="avontuur"
-					className={selectedFilter === "avontuur" ? "selected" : ""} // Add 'selected' class if this filter is selected
+					className={selectedFilter === "avontuur" ? "selected" : ""} 
 				>
 					Adventure
 				</label>
@@ -27,12 +27,12 @@ export const SearchFilter = ({ selectedFilter, setSelectedFilter }) => {
 					type="radio"
 					name="filter"
 					id="horror"
-					checked={selectedFilter === "horror"} // Check if this filter is selected
-					onChange={handleFilterChange} // Handle change
+					checked={selectedFilter === "horror"} 
+					onChange={handleFilterChange} 
 				/>
 				<label
 					htmlFor="horror"
-					className={selectedFilter === "horror" ? "selected" : ""} // Add 'selected' class if this filter is selected
+					className={selectedFilter === "horror" ? "selected" : ""} 
 				>
 					Horror
 				</label>
@@ -42,12 +42,12 @@ export const SearchFilter = ({ selectedFilter, setSelectedFilter }) => {
 					type="radio"
 					name="filter"
 					id="fantasie"
-					checked={selectedFilter === "fantasie"} // Check if this filter is selected
-					onChange={handleFilterChange} // Handle change
+					checked={selectedFilter === "fantasie"}
+					onChange={handleFilterChange}
 				/>
 				<label
 					htmlFor="fantasie"
-					className={selectedFilter === "fantasie" ? "selected" : ""} // Add 'selected' class if this filter is selected
+					className={selectedFilter === "fantasie" ? "selected" : ""} 
 				>
 					Fantasy
 				</label>

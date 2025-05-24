@@ -1,28 +1,28 @@
-// hooks/useGetData.ts
 import { useEffect, useState } from "react";
 import { dataService } from "../service/data.service";
-import { ApiData } from "../types/types"; // Import the ApiData type
+import { ApiData } from "../types/types"; 
 
 export const useGetData = () => {
-	const [data, setData] = useState<ApiData[]>([]); // Use the ApiData type
+	const [data, setData] = useState<ApiData[]>([]); 
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
+			setLoading(true); 
 			try {
-				const result = await dataService.getData(); // Assuming this returns ApiData[]
+				const result = await dataService.getData(); 
 				setData(result);
 			} catch (err) {
-				setError("Error fetching data");
-				console.error(err);
+				setError("Error fetching data"); 
+				console.error(err); 
 			} finally {
-				setLoading(false);
+				setLoading(false); 
 			}
 		};
 
-		fetchData();
-	}, []); // Empty dependency array means this runs once when the component mounts
+		fetchData(); 
+	}, []);
 
-	return { data, loading, error }; // Return the data, loading state, and error
+	return { data, loading, error };
 };

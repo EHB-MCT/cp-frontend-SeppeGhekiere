@@ -7,19 +7,25 @@ input {
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
 	width: 70%;
-	height: 105%;
+	height: 100%;
 	box-shadow: none;
 	border: none;
+	font-size: 1.25rem;
 }
 button {
 	z-index: 1;
 	background-color: red;
-	height: 3.5vh;
+	height: 100%;
 	padding: 0vh 5vw 0.5vh 5vw;
 	border: none;
 	border-radius: 10px;
 	color: white;
 	margin-left: -6px;
+	align-items: center;
+}
+button p {
+	margin-top: -0.25rem;
+	font-size: 1.25rem;
 }
 .searchFilter {
 	display: grid;

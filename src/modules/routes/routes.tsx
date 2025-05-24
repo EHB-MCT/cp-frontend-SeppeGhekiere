@@ -17,14 +17,10 @@ export const router = createHashRouter([
 				path: "",
 				element: <Header />,
 			},
-			{
-				path: "",
-				element: <Footer />,
-			},
 		],
 	},
 	{
-		path: "/making-of",
+		path: "/making-of/:id",
 		element: <MakingOf />,
 		children: [
 			{

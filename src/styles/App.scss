@@ -18,11 +18,16 @@
 	flex-direction: column;
 }
 .home h1 {
-	font-size: 5vh;
+	font-size: 4rem;
 	margin-bottom: 1vh;
 }
 .home .title {
 	margin-bottom: 15vh;
+}
+
+.title p {
+	font-size: 1.25rem;
+	max-width: 45vw;
 }
 .fairytale h1 {
 	color: white;
@@ -34,11 +39,13 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2.5vw;
+	margin-bottom: 5vh;
 }
 .single-fairytale {
 	height: 35vh;
 	background-color: white;
 	border-radius: 25px;
+	text-decoration: none;
 }
 .single-fairytale-info {
 	display: flex;
@@ -53,6 +60,9 @@
 	color: crimson !important;
 	margin: 0 !important;
 }
+.author {
+	color: black;
+}
 
 .coverImg {
 	width: 100%;
@@ -63,8 +73,8 @@
 	border-top-left-radius: 25px;
 }
 .home .searchButton {
-	width: 40vw;
-	height: 3vh;
+	width: 45vw;
+	height: 2.5rem;
 }
 .home-btn-all-projects {
 	background-color: white;
@@ -83,16 +93,63 @@
 	flex-direction: column;
 }
 .allProjects .searchButton {
-	width: 35vw;
-	height: 3vh;
+	width: 40vw;
+	height: 2.5rem;
 	align-self: center;
-	margin-left: 3px;
 }
 .allProjects .searchFilter {
 	align-self: center;
 	width: 30vw;
 	justify-content: space-between;
 }
-.making-info{
-	
+
+.making-info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.making-info-image {
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+	background-position: center;
+	border-radius: 25px;
+}
+
+.making-info-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 0vh 2.5vw;
+	height: 100%;
+	font-size: 1.25rem;
+}
+.making-info-text h1 {
+	font-size: 4rem;
+}
+.making-info-link {
+	background-color: white;
+	height: 3.5vh;
+	padding: 0.5vh 5vw;
+	border: none;
+	border-radius: 10px;
+	color: red;
+	align-self: flex-start;
+	align-content: center;
+	margin-top: 5vh;
+	text-decoration: none;
+}
+
+.making-extra-images {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2.5vw;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+.making-extra-images div {
+	width: 100%;
+	height: 35vh;
+	background-size: cover;
+	background-position: center;
+	border-radius: 25px;
 }
