@@ -12,7 +12,7 @@ export const Navigation = () => {
 			<Link to="/all-projects" className={location.pathname === "/all-projects" ? "clicked" : ""}>
 				All Projects
 			</Link>
-			<Link to="/making-of" className={location.pathname === "/making-of" ? "clicked" : ""}>
+			<Link to="/making-of/seppe-ghekiere-de-witte-slang" className={location.pathname === "/making-of/seppe-ghekiere-de-witte-slang" ? "clicked" : ""}>
 				Making Of
 			</Link>
 

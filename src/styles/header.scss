@@ -25,7 +25,10 @@
 	font-weight: 500;
 	transition: all 0.3s ease-in-out;
 }
+.nav a:hover {
+	color: red;
+	text-decoration: underline;
+}
 .clicked {
 	color: red !important;
 }
-
