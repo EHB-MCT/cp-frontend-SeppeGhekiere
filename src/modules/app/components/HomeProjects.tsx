@@ -32,11 +32,10 @@ export const HomeProjects = () => {
 			<div className="fairytale-container">
 				{randomProjects.map((item) => (
 					<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
-						<img
-							src={item.imgThumbnail || "path/to/placeholder-image.png"} // Fallback image
+						<div
 							className="coverImg"
-							alt={item.fairytale}
-						/>
+							style={{ backgroundImage: `url(${item.imgThumbnail})` }} // Correctly set the background image
+						></div>
 						<h1 className="name">{item.fairytale}</h1>
 						<p className="author">Door {item.nameStudent}</p> {/* Assuming nameStudent is the author */}
 					</a>
