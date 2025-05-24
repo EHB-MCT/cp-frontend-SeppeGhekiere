@@ -15,23 +15,36 @@ button {
 	z-index: 1;
 	background-color: red;
 	height: 3.5vh;
-	padding: 0.5vh 5vw;
+	padding: 0vh 5vw 0.5vh 5vw;
 	border: none;
 	border-radius: 10px;
 	color: white;
 	margin-left: -6px;
 }
 .searchFilter {
-	display: flex;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2.5vw;
 }
 .searchFilter input {
-	height: 1.5rem;
+	height: 1rem;
+	width: auto;
+	margin: 0;
+	accent-color: red;
 }
 .filterItem {
 	display: flex;
 	align-items: center;
-	width: 10%;
-	font-size: 1.25rem;
-	color: white;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: black;
 	align-self: center;
+	background-color: white;
+	border-radius: 25px;
+}
+.selected {
+	color: red;
 }

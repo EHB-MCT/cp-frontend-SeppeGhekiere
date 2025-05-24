@@ -30,16 +30,22 @@ export const HomeProjects = () => {
 		<div className="fairytale">
 			<h1>All Projects</h1>
 			<div className="fairytale-container">
-				{randomProjects.map((item) => (
-					<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
-						<div
-							className="coverImg"
-							style={{ backgroundImage: `url(${item.imgThumbnail})` }} // Correctly set the background image
-						></div>
-						<h1 className="name">{item.fairytale}</h1>
-						<p className="author">Door {item.nameStudent}</p> {/* Assuming nameStudent is the author */}
-					</a>
-				))}
+				{randomProjects.map((item) => {
+					const placeholderImage = "/src/assets/not_found_placeholder.png"; // Replace with your actual placeholder image path
+					const backgroundImage = item.imgThumbnail ? `url(${item.imgThumbnail})` : `url(${placeholderImage})`;
+					return (
+						<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
+							<div
+								className="coverImg"
+								style={{ backgroundImage: backgroundImage }} // Set the background image
+							></div>
+							<div className="single-fairytale-info">
+								<h1 className="name">{item.fairytale}</h1>
+								<p className="author">Door {item.nameStudent}</p>
+							</div>
+						</a>
+					);
+				})}
 			</div>
 		</div>
 	);
