@@ -16,7 +16,7 @@ export const Navigation = () => {
 				Making Of
 			</Link>
 
-			<Link to="/fairy-tale" className={location.pathname === "/fairy-tale" ? "clicked" : ""}>
+			<Link to="/fairytale" className={location.pathname === "/fairy-tale" ? "clicked" : ""}>
 				Sprookje
 			</Link>
 		</div>

@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router";
 import { router } from "../../routes/routes";
 import "../../../styles/App.scss";
+import "../../../styles/main.scss"; // Assuming you have a main.scss file for global styles
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {

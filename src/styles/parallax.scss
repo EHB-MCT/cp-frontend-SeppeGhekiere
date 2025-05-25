@@ -1,10 +1,94 @@
-.parallax-image {
-	width: 100%;
-	max-width: 100vw;
-	z-index: -1;
+$white: #ffffff;
+$background: rgb(239, 241, 243);
+$blue: #0a78f2;
+$black: rgb(17, 17, 17);
+// $stateFocus: # ;
+$stateHover: #f2b40a;
+// $stateActive: # ;
+// $stateDisabled: # ;
+// $lightGrey: # ;
+// $darkGrey: # ;
+
+.parallaxContainer {
+	background-color: $white;
+	margin-left: -5vw;
+	width: calc(100% + 10vw);
 }
-.parallax-snake {
+
+.contentImg {
+	position: relative;
+	height: 150vh;
+}
+
+.stickyImageBackground {
+	background-size: cover;
+	background-position: center;
+	position: sticky;
+	width: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.stickyImageOverlay {
 	position: absolute;
-	max-height: 100vh;
+	inset: 0;
+	background-color: rgba($color: $black, $alpha: 0.5);
+}
+
+.overlayContainer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	height: 100vh;
+	width: calc(100% - 20vw);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	z-index: 2;
+}
+
+.overlaySubHeading {
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-size: 1.25rem;
+
+	@media (min-width: 768px) {
+		margin-bottom: 1rem;
+		font-size: 1.875rem;
+	}
+}
+
+.overlayHeading {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: bold;
+
+	@media (min-width: 768px) {
+		font-size: 4.375rem;
+	}
+}
+.overlayImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $white;
 	z-index: 1;
+}
+// ________________________________________________________________________________________________
+// Frame 1
+
+.Frame1_snake {
+	width: calc(100% + 10vw);
+	margin-left: -20vw;
+	margin-bottom: -20vh;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
