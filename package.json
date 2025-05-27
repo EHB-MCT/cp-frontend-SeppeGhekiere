@@ -3,6 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"homepage": "https://ehb-mct.github.io/cp-frontend-SeppeGhekiere",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
