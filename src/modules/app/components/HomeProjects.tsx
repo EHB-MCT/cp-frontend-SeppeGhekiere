@@ -29,7 +29,7 @@ export const HomeProjects = () => {
 			<h1>All Projects</h1>
 			<div className="fairytale-container">
 				{randomProjects.map((item) => {
-					const placeholderImage = "/assets/not_found_placeholder.png";
+					const placeholderImage = "/cp-frontend-SeppeGhekiere/assets/not_found_placeholder.png";
 					const backgroundImage = item.imgThumbnail ? `url(${item.imgThumbnail})` : `url(${placeholderImage})`;
 					return (
 						<Link key={item.id} className="single-fairytale" to={`/making-of/${item.id}`}>
