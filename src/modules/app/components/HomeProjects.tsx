@@ -1,4 +1,5 @@
 import { useGetData } from "../../shared/hooks/UseGetData";
+import { Link } from "react-router";
 import "../../../styles/app.scss";
 export const HomeProjects = () => {
 	const { data: projects, loading, error } = useGetData();
@@ -31,13 +32,13 @@ export const HomeProjects = () => {
 					const placeholderImage = "/src/assets/not_found_placeholder.png";
 					const backgroundImage = item.imgThumbnail ? `url(${item.imgThumbnail})` : `url(${placeholderImage})`;
 					return (
-						<a key={item.id} className="single-fairytale" href={item.fairytalelink}>
+						<Link key={item.id} className="single-fairytale" to={`/making-of/${item.id}`}>
 							<div className="coverImg" style={{ backgroundImage: backgroundImage }}></div>
 							<div className="single-fairytale-info">
 								<h1 className="name">{item.fairytale}</h1>
 								<p className="author">Door {item.nameStudent}</p>
 							</div>
-						</a>
+						</Link>
 					);
 				})}
 			</div>
