@@ -18,13 +18,12 @@ export const FairyTale = () => {
 			>
 				Go back
 			</Link>
-			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het sprookje ..." heading="De koning en de witte slang" direction="right" height="100vh" />
+			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het sprookje ..." heading="De koning en de witte slang" direction="right" />
 			<ParallaxContent
 				imgUrl="src/assets/Frame1_background.png"
 				subHeading="Er was eens een witte slang die veranderde in een vrouw."
 				heading=""
 				direction="right"
-				height="100vh"
 				children={
 					<div>
 						<Frame1Text subHeading="En deze vrouw was op zoek naar iets na eeuwen lang in het mytische woud te blijven" heading="" direction="right" />
@@ -37,7 +36,6 @@ export const FairyTale = () => {
 				subHeading="Dus ging ze naar de dichste stad en begon ze te zoeken"
 				heading=""
 				direction="right"
-				height="100vh"
 				children={
 					<div>
 						<Frame2Text subHeading="Tot ze plots oog in oog kwam met een man" />
@@ -51,7 +49,6 @@ export const FairyTale = () => {
 				subHeading="En ze werden direct verliefd op elkaar"
 				heading=""
 				direction="left"
-				height="100vh"
 				children={
 					<div>
 						<Frame3_man imgUrl="/src/assets/Frame3_man.png" className="Frame3_man" />
@@ -64,7 +61,6 @@ export const FairyTale = () => {
 				subHeading=""
 				heading=""
 				direction="left"
-				height="100vh"
 				children={
 					<div>
 						<Frame4Text
@@ -81,7 +77,6 @@ export const FairyTale = () => {
 				subHeading="Na een paar jaar getrouwd komt een monk naar de tempel"
 				heading=""
 				direction="right"
-				height="100vh"
 				children={<Frame5_monk imgUrl="/src/assets/Frame5_monk.png" className="Frame5_man" />}
 			></ParallaxContent>
 			<ParallaxContent
@@ -89,7 +84,6 @@ export const FairyTale = () => {
 				subHeading="De vrouw niet wetend dat de monk rondkijkt in de tempel, verandert van gedaante"
 				heading=""
 				direction="right"
-				height="100vh"
 				children={
 					<div>
 						<SnakeTransform4 imgUrl="/src/assets/Frame6_snake.png" className="Frame1_snake" /> <SnakeTransform3 imgUrl="/src/assets/Frame6_woman.png" className="Frame1_woman" />
@@ -101,7 +95,6 @@ export const FairyTale = () => {
 				subHeading=""
 				heading=""
 				direction="center"
-				height="100vh"
 				children={
 					<div>
 						<Frame4Text sentences={["De monk heeft het gezien en wilt dat ze opgesloten wordt", "Maar de koning gelooft hem niet", "Enh hij wilt haar niet kwijt", "Dus hij jaagt de monk weg"]} direction="center" />
@@ -116,7 +109,6 @@ export const FairyTale = () => {
 				subHeading="De vrouw wilt gewoon hier in de tempel blijven en genieten van haar leven"
 				heading=""
 				direction="left"
-				height="100vh"
 				children={
 					<div>
 						<Frame9_woman imgUrl="/src/assets/Frame9_woman.png" className="Frame2_woman" />
@@ -129,7 +121,6 @@ export const FairyTale = () => {
 				subHeading=""
 				heading=""
 				direction="center"
-				height="100vh"
 				children={
 					<div>
 						<Frame4Text sentences={["Oh nee, de thee was vergiftigd", "Waar ben ik?", "Heeft die monk dit gedaan?", "Gaat de koning nog van mij houden ook al weet hij dat ik een slang ben?"]} direction="left" />
@@ -142,7 +133,6 @@ export const FairyTale = () => {
 				subHeading=""
 				heading=""
 				direction="center"
-				height="100vh"
 				children={
 					<div>
 						<Frame4Text sentences={["De koning was lang op zoek naar zijn vrouw", "Maar naar lang zoeken vond hij de toren", ""]} direction="right" />
@@ -155,7 +145,6 @@ export const FairyTale = () => {
 				subHeading=""
 				heading=""
 				direction="center"
-				height="100vh"
 				children={
 					<div>
 						<Frame4Text sentences={["Nadat ze elkaar terug gevonden hadden", "Zei de koning: Ik heb je zo gemist ", "Je zal altijd mooi zijn welke gedaante je ook aanneemt"]} direction="left" />
@@ -164,7 +153,7 @@ export const FairyTale = () => {
 					</div>
 				}
 			></ParallaxContent>
-			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het einde: dit was..." heading="De koning en de witte slang" direction="right" height="100vh" />
+			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het einde: dit was..." heading="De koning en de witte slang" direction="right" />
 		</div>
 	);
 };
@@ -173,20 +162,18 @@ type ParallaxContentProps = {
 	imgUrl: string;
 	subHeading?: string;
 	heading?: string;
-	height?: string;
 	direction?: "left" | "right" | "center";
 	children?: ReactNode;
 	offset?: number;
 };
 
-const ParallaxContent = ({ imgUrl, subHeading, heading, height = "100vh", direction = "center", children, offset = 0 }: ParallaxContentProps) => {
+const ParallaxContent = ({ imgUrl, subHeading, heading, direction = "center", children, offset = 0 }: ParallaxContentProps) => {
 	const [elementTop, setElementTop] = useState(0);
 	const [clientHeight, setClientHeight] = useState(0);
 	const ref = useRef<HTMLDivElement | null>(null);
 
 	const { scrollY } = useScroll();
 
-	// Calculate the initial and final scroll positions for the animation
 	const initial = elementTop - clientHeight;
 	const final = elementTop + offset;
 
@@ -211,7 +198,7 @@ const ParallaxContent = ({ imgUrl, subHeading, heading, height = "100vh", direct
 	return (
 		<motion.div ref={ref} style={{ y }}>
 			<div className="contentImg">
-				<StickyImage imgUrl={imgUrl} height={height} />
+				<StickyImage imgUrl={imgUrl}  />
 				<OverlayCopy heading={heading} subHeading={subHeading} direction={direction} alignItems={align} />
 				{children}
 			</div>
@@ -219,9 +206,7 @@ const ParallaxContent = ({ imgUrl, subHeading, heading, height = "100vh", direct
 	);
 };
 
-// Assuming these components exist elsewhere and unchanged:
-
-const StickyImage = ({ imgUrl, height }: { imgUrl: string; height?: string }) => {
+const StickyImage = ({ imgUrl }: { imgUrl: string; }) => {
 	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
@@ -233,7 +218,7 @@ const StickyImage = ({ imgUrl, height }: { imgUrl: string; height?: string }) =>
 			className="stickyImageBackground"
 			style={{
 				backgroundImage: `url(${imgUrl})`,
-				height: height,
+				
 				top: "0",
 			}}
 			ref={targetRef}
@@ -285,7 +270,7 @@ const OverlayCopy = ({ subHeading, heading, direction, alignItems }: OverlayCopy
 };
 // _________________________________________________________________________________
 const SnakeTransform1 = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -306,15 +291,15 @@ const SnakeTransform1 = ({ imgUrl, className }: any) => {
 				scale,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 const SnakeTransform2 = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -336,96 +321,90 @@ const SnakeTransform2 = ({ imgUrl, className }: any) => {
 				rotate,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 const Frame1Text = ({ subHeading, heading, direction }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 
-	// We track the scroll progress for this element
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
-		offset: ["start end", "end start"], // Default offset
+		offset: ["start end", "end start"],
 	});
 
-	// The vertical movement (y) of the text and the opacity are adjusted during scrolling
-	const y = useTransform(scrollYProgress, [0, 1], [1000, 400]); // The text moves from bottom to top
-	const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.95], [0, 1, 0]); // The text becomes visible between 15% and 85% of the scroll
+	const y = useTransform(scrollYProgress, [0, 1], [1000, 400]);
+	const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.95], [0, 1, 0]);
 
-	let align = "center"; // Default text alignment is centered
-	// The text direction is adjusted based on the 'direction' prop
+	let align = "center";
+
 	if (direction === "left") {
-		align = "flex-start"; // If the direction is 'left', align text to the left
+		align = "flex-start";
 	} else if (direction === "center") {
-		align = "center"; // If the direction is 'center', center the text
+		align = "center";
 	} else if (direction === "right") {
-		align = "flex-end"; // If the direction is 'right', align text to the right
+		align = "flex-end";
 	}
 
 	return (
 		<motion.div
 			style={{
-				y, // The movement of the text on the y-axis
-				opacity, // The transparency of the text
-				alignItems: align, // The alignment of the text depending on the direction
+				y,
+				opacity,
+				alignItems: align,
 				padding: "0 10vw",
-				// If sticky is 'yes', position the text at 50% of the viewport height
 			}}
-			ref={targetRef} // Attach the ref to the element
+			ref={targetRef}
 			className="overlayContainer"
 		>
-			<p className="overlaySubHeading">{subHeading}</p> {/* Subheading text */}
-			<p className="overlayHeading">{heading}</p> {/* Main heading text */}
+			<p className="overlaySubHeading">{subHeading}</p>
+			<p className="overlayHeading">{heading}</p>
 		</motion.div>
 	);
 };
 // ___________________________________________________________________________________________________
 const Frame2Text = ({ subHeading, heading, direction }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 
-	// We track the scroll progress for this element
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"], // Default offset
 	});
 
-	// The vertical movement (y) of the text and the opacity are adjusted during scrolling
-	const y = useTransform(scrollYProgress, [0, 1], [1000, -200]); // The text moves from bottom to top
-	const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.95], [0, 1, 0]); // The text becomes visible between 15% and 85% of the scroll
+	const y = useTransform(scrollYProgress, [0, 1], [1000, -200]);
+	const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.95], [0, 1, 0]);
 
-	let align = "center"; // Default text alignment is centered
-	// The text direction is adjusted based on the 'direction' prop
+	let align = "center";
 	if (direction === "left") {
-		align = "flex-start"; // If the direction is 'left', align text to the left
+		align = "flex-start";
 	} else if (direction === "center") {
-		align = "center"; // If the direction is 'center', center the text
+		align = "center";
 	} else if (direction === "right") {
-		align = "flex-end"; // If the direction is 'right', align text to the right
+		align = "flex-end";
 	}
 
 	return (
 		<motion.div
 			style={{
-				y, // The movement of the text on the y-axis
-				opacity, // The transparency of the text
-				alignItems: align, // The alignment of the text depending on the direction
+				y,
+				opacity,
+				alignItems: align,
+				textAlign: align,
 				padding: "0 10vw",
-				// If sticky is 'yes', position the text at 50% of the viewport height
 			}}
-			ref={targetRef} // Attach the ref to the element
+			ref={targetRef}
 			className="overlayContainer"
 		>
-			<p className="overlaySubHeading">{subHeading}</p> {/* Subheading text */}
-			<p className="overlayHeading">{heading}</p> {/* Main heading text */}
+			<p className="overlaySubHeading">{subHeading}</p>
+			<p className="overlayHeading">{heading}</p>
 		</motion.div>
 	);
 };
 const Frame2_images = ({ imgUrl, className, direction }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -452,16 +431,16 @@ const Frame2_images = ({ imgUrl, className, direction }: any) => {
 				x,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 // __________________________________________________________________________________________________
 const Frame3_man = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -481,15 +460,15 @@ const Frame3_man = ({ imgUrl, className }: any) => {
 				y,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 const Frame3_woman = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -511,22 +490,22 @@ const Frame3_woman = ({ imgUrl, className }: any) => {
 				rotateY,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 // __________________________________________________________________________________________________
-// Animate up and down in center for Frame4_man and Frame4_woman
+
 const Frame4_man = ({ imgUrl, className }: any) => {
 	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
 	});
-	// y moves in a smooth oscillating manner (like up and down)
+
 	const y = useTransform(scrollYProgress, [0, 0.75, 1], [-400, 300, 250]);
 	const scale = useTransform(scrollYProgress, [0.5, 0.75], [1, 0.5]);
 	const x = useTransform(scrollYProgress, [0.25, 1], [400, -150]);
@@ -538,7 +517,7 @@ const Frame4_man = ({ imgUrl, className }: any) => {
 			style={{
 				y,
 				x,
-				scale, // fixed center horizontally
+				scale,
 				opacity,
 				backgroundImage: `url(${imgUrl})`,
 				backgroundSize: "contain",
@@ -585,16 +564,16 @@ const Frame4Text = ({ sentences, direction }: { sentences: string[]; direction: 
 		target: targetRef,
 		offset: ["start end", "end start"],
 	});
-	// Define the y position and opacity for each sentence
+
 	const y = useTransform(scrollYProgress, [0, 1], [-250, 250]);
 	const opacity1 = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 	const opacity2 = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
 	const opacity3 = useTransform(scrollYProgress, [0.5, 0.7], [0, 1]);
-	let align = "center"; // Default text alignment is centered
+	let align = "center";
 	if (direction === "left") {
-		align = "flex-start"; // Align text to the left
+		align = "flex-start";
 	} else if (direction === "right") {
-		align = "flex-end"; // Align text to the right
+		align = "flex-end";
 	}
 	return (
 		<motion.div
@@ -649,7 +628,7 @@ const Frame4Text = ({ sentences, direction }: { sentences: string[]; direction: 
 };
 // __________________________________________________________________________________________________
 const Frame5_monk = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end end"],
@@ -659,8 +638,6 @@ const Frame5_monk = ({ imgUrl, className }: any) => {
 
 	const y = -200;
 
-	// const scale = useTransform(scrollYProgress, [0.5, 1], [1, 0.5]);
-
 	const opacity = useTransform(scrollYProgress, [0.5, 0.65], [1, 0]);
 
 	return (
@@ -668,21 +645,20 @@ const Frame5_monk = ({ imgUrl, className }: any) => {
 			className={`overlayImage ${className || ""}`}
 			ref={targetRef}
 			style={{
-				// scale,
 				y,
 				x,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 // __________________________________________________________________________________________________
 const SnakeTransform3 = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -703,15 +679,15 @@ const SnakeTransform3 = ({ imgUrl, className }: any) => {
 				scale,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 const SnakeTransform4 = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end start"],
@@ -732,16 +708,16 @@ const SnakeTransform4 = ({ imgUrl, className }: any) => {
 				scale,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 // __________________________________________________________________________________________________
 const Frame7_monk = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end end"],
@@ -751,7 +727,6 @@ const Frame7_monk = ({ imgUrl, className }: any) => {
 
 	const y = -50;
 
-	// const scale = useTransform(scrollYProgress, [0.5, 1], [1, 0.5]);
 	const scale = 0.75;
 	const opacity = useTransform(scrollYProgress, [0.5, 0.75], [1, 0]);
 	const rotateY = 180;
@@ -760,22 +735,21 @@ const Frame7_monk = ({ imgUrl, className }: any) => {
 			className={`overlayImage ${className || ""}`}
 			ref={targetRef}
 			style={{
-				// scale,
 				y,
 				x,
 				rotateY,
 				scale,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);
 };
 const Frame7_man = ({ imgUrl, className }: any) => {
-	const targetRef = useRef(null); // Create a reference to the element
+	const targetRef = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
 		offset: ["start end", "end end"],
@@ -785,8 +759,6 @@ const Frame7_man = ({ imgUrl, className }: any) => {
 	const scale = 0.6;
 	const y = -100;
 
-	// const scale = useTransform(scrollYProgress, [0.5, 1], [1, 0.5]);
-
 	const opacity = useTransform(scrollYProgress, [0.5, 0.75], [1, 0]);
 
 	return (
@@ -794,15 +766,14 @@ const Frame7_man = ({ imgUrl, className }: any) => {
 			className={`overlayImage ${className || ""}`}
 			ref={targetRef}
 			style={{
-				// scale,
 				y,
 				x,
 				scale,
 				backgroundImage: `url(${imgUrl})`,
 				opacity,
-				backgroundSize: "contain", // Ensure the image fits well
-				backgroundRepeat: "no-repeat", // Prevent the image from repeating
-				backgroundPosition: "center", // Center the image
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center",
 			}}
 		></motion.div>
 	);

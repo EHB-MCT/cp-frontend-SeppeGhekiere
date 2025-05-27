@@ -24,12 +24,15 @@ $stateHover: #f2b40a;
 	position: relative;
 	height: 150vh;
 }
-
+.ParallaxContent {
+	height: 100vh;
+}
 .stickyImageBackground {
 	background-size: cover;
 	background-position: center;
 	position: sticky;
 	width: 100%;
+	height: 100vh;
 	overflow: hidden;
 	z-index: 0;
 }
