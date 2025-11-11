@@ -18,46 +18,46 @@ export const FairyTale = () => {
 			>
 				Go back
 			</Link>
-			<ParallaxContent imgUrl="/cp-frontend-SeppeGhekiere/thumbnail.png" subHeading="Het sprookje ..." heading="De koning en de witte slang" direction="right" />
+			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het sprookje ..." heading="De koning en de witte slang" direction="right" />
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame1_background.png"
+				imgUrl="/assets/Frame1_background.png"
 				subHeading="Er was eens een witte slang die veranderde in een vrouw."
 				heading=""
 				direction="right"
 				children={
 					<div>
 						<Frame1Text subHeading="En deze vrouw was op zoek naar iets na eeuwen lang in het mytische woud te blijven" heading="" direction="right" />
-						<SnakeTransform1 imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame1_snake.png" className="Frame1_snake" /> <SnakeTransform2 imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame1_woman_cutout.png" className="Frame1_woman" />
+						<SnakeTransform1 imgUrl="/assets/Frame1_snake.png" className="Frame1_snake" /> <SnakeTransform2 imgUrl="/assets/Frame1_woman_cutout.png" className="Frame1_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame2_background.png"
+				imgUrl="/assets/Frame2_background.png"
 				subHeading="Dus ging ze naar de dichste stad en begon ze te zoeken"
 				heading=""
 				direction="right"
 				children={
 					<div>
 						<Frame2Text subHeading="Tot ze plots oog in oog kwam met een man" />
-						<Frame2_images imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame2_woman.png" className="Frame2_woman" direction="right" />
-						<Frame2_images imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame2_man.png" className="Frame2_woman" direction="left" />
+						<Frame2_images imgUrl="/assets/Frame2_woman.png" className="Frame2_woman" direction="right" />
+						<Frame2_images imgUrl="/assets/Frame2_man.png" className="Frame2_woman" direction="left" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame3_background.png"
+				imgUrl="/assets/Frame3_background.png"
 				subHeading="En ze werden direct verliefd op elkaar"
 				heading=""
 				direction="left"
 				children={
 					<div>
-						<Frame3_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame3_man.png" className="Frame3_man" />
-						<Frame3_woman imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame3_woman.png" className="Frame3_man" />
+						<Frame3_man imgUrl="/assets/Frame3_man.png" className="Frame3_man" />
+						<Frame3_woman imgUrl="/assets/Frame3_woman.png" className="Frame3_man" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame4_background.png"
+				imgUrl="/assets/Frame4_background.png"
 				subHeading=""
 				heading=""
 				direction="left"
@@ -67,93 +67,93 @@ export const FairyTale = () => {
 							sentences={["Na lang te praten heeft de man besloten, zijn identiteit te delen met de vrouw.", "Hij was de koning.", "En hij wou met haar trouwen", "De vrouw was blij maar ook bang want niemand mocht weten dat ze een slang was"]}
 							direction="left"
 						/>
-						<Frame4_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame4_man.png" className="Frame4_man" />
-						<Frame4_woman imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame4_woman.png" className="Frame4_woman" />
+						<Frame4_man imgUrl="/assets/Frame4_man.png" className="Frame4_man" />
+						<Frame4_woman imgUrl="/assets/Frame4_woman.png" className="Frame4_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame5_background.png"
+				imgUrl="/assets/Frame5_background.png"
 				subHeading="Na een paar jaar getrouwd komt een monk naar de tempel"
 				heading=""
 				direction="right"
-				children={<Frame5_monk imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame5_monk.png" className="Frame5_man" />}
+				children={<Frame5_monk imgUrl="/assets/Frame5_monk.png" className="Frame5_man" />}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame6_background.png"
+				imgUrl="/assets/Frame6_background.png"
 				subHeading="De vrouw niet wetend dat de monk rondkijkt in de tempel, verandert van gedaante"
 				heading=""
 				direction="right"
 				children={
 					<div>
-						<SnakeTransform4 imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame6_snake.png" className="Frame1_snake" /> <SnakeTransform3 imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame6_woman.png" className="Frame1_woman" />
+						<SnakeTransform4 imgUrl="/assets/Frame6_snake.png" className="Frame1_snake" /> <SnakeTransform3 imgUrl="/assets/Frame6_woman.png" className="Frame1_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame7_background.jpg"
+				imgUrl="/assets/Frame7_background.jpg"
 				subHeading=""
 				heading=""
 				direction="center"
 				children={
 					<div>
 						<Frame4Text sentences={["De monk heeft het gezien en wilt dat ze opgesloten wordt", "Maar de koning gelooft hem niet", "Enh hij wilt haar niet kwijt", "Dus hij jaagt de monk weg"]} direction="center" />
-						<Frame7_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame7_woman.png" className="Frame2_woman" />
-						<Frame7_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame7_man.png" className="Frame2_woman" />
-						<Frame7_monk imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame7_monk.png" className="Frame2_woman" />
+						<Frame7_man imgUrl="/assets/Frame7_woman.png" className="Frame2_woman" />
+						<Frame7_man imgUrl="/assets/Frame7_man.png" className="Frame2_woman" />
+						<Frame7_monk imgUrl="/assets/Frame7_monk.png" className="Frame2_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame9_background.png"
+				imgUrl="/assets/Frame9_background.png"
 				subHeading="De vrouw wilt gewoon hier in de tempel blijven en genieten van haar leven"
 				heading=""
 				direction="left"
 				children={
 					<div>
-						<Frame9_woman imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame9_woman.png" className="Frame2_woman" />
+						<Frame9_woman imgUrl="/assets/Frame9_woman.png" className="Frame2_woman" />
 						<Frame9_blackout />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame10_background.png"
+				imgUrl="/assets/Frame10_background.png"
 				subHeading=""
 				heading=""
 				direction="center"
 				children={
 					<div>
 						<Frame4Text sentences={["Oh nee, de thee was vergiftigd", "Waar ben ik?", "Heeft die monk dit gedaan?", "Gaat de koning nog van mij houden ook al weet hij dat ik een slang ben?"]} direction="left" />
-						<Frame10_woman imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame4_woman.png" className="Frame2_woman" />
+						<Frame10_woman imgUrl="/assets/Frame4_woman.png" className="Frame2_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame11_background.png"
+				imgUrl="/assets/Frame11_background.png"
 				subHeading=""
 				heading=""
 				direction="center"
 				children={
 					<div>
 						<Frame4Text sentences={["De koning was lang op zoek naar zijn vrouw", "Maar naar lang zoeken vond hij de toren", ""]} direction="right" />
-						<Frame11_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame11_man_on_horse.png" className="Frame2_woman" />
+						<Frame11_man imgUrl="/assets/Frame11_man_on_horse.png" className="Frame2_woman" />
 					</div>
 				}
 			></ParallaxContent>
 			<ParallaxContent
-				imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame14_background.png"
+				imgUrl="/assets/Frame14_background.png"
 				subHeading=""
 				heading=""
 				direction="center"
 				children={
 					<div>
 						<Frame4Text sentences={["Nadat ze elkaar terug gevonden hadden", "Zei de koning: Ik heb je zo gemist ", "Je zal altijd mooi zijn welke gedaante je ook aanneemt"]} direction="left" />
-						<Frame14_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame14_woman.png" className="Frame2_woman" />
-						<Frame14_man imgUrl="/cp-frontend-SeppeGhekiere/assets/Frame14_man.png" className="Frame2_woman" />
+						<Frame14_man imgUrl="/assets/Frame14_woman.png" className="Frame2_woman" />
+						<Frame14_man imgUrl="/assets/Frame14_man.png" className="Frame2_woman" />
 					</div>
 				}
 			></ParallaxContent>
-			<ParallaxContent imgUrl="/cp-frontend-SeppeGhekiere/thumbnail.png" subHeading="Het einde: dit was..." heading="De koning en de witte slang" direction="right" />
+			<ParallaxContent imgUrl="/thumbnail.png" subHeading="Het einde: dit was..." heading="De koning en de witte slang" direction="right" />
 		</div>
 	);
 };

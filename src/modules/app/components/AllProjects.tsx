@@ -30,7 +30,7 @@ export const AllProjects = ({ selectedFilter }) => {
 			<h1>All Projects</h1>
 			<div className="fairytale-container">
 				{sortedProjects.map((item) => {
-					const placeholderImage = "/cp-frontend-SeppeGhekiere/not_found_placeholder.png";
+					const placeholderImage = "/not_found_placeholder.png";
 					const backgroundImage = item.imgThumbnail ? `url(${item.imgThumbnail})` : `url(${placeholderImage})`;
 					return (
 						<Link key={item.id} className="single-fairytale" to={`/making-of/${item.id}`}>
